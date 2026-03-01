@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import { SignedIn, SignedOut, SignInButton, SignOutButton } from '@asgardeo/react'
 
 const Header = () => {
   return (
@@ -10,6 +11,12 @@ const Header = () => {
         <NavLink to="/employee-mgmt" className="nav-link">
           EmployeeMgmt
         </NavLink>
+        <SignedIn>
+          <SignOutButton />
+        </SignedIn>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
       </nav>
     </header>
   )
